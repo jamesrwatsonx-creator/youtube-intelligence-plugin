@@ -2,7 +2,7 @@ def _schema(description: str, properties: dict, required: list[str] | None = Non
     return {
         "name": "",
         "description": description,
-        "input_schema": {
+        "parameters": {
             "type": "object",
             "properties": properties,
             "required": required or [],
