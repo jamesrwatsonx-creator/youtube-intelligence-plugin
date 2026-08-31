@@ -1,13 +1,8 @@
 name: youtube-intelligence
 version: 0.1.0
 description: YouTube research, breakout detection, niche analysis, and watchlist intelligence.
-engine_package: youtube_intelligence
 
-# Hermes-specific registration is intentionally kept in this adapter layer.
-# Final manifest fields should be aligned with the exact Hermes plugin schema
-# used by the target Hermes installation before release.
-
-tools:
+provides_tools:
   - youtube_search
   - youtube_find_outliers
   - youtube_find_breakouts
@@ -19,9 +14,8 @@ tools:
   - youtube_create_watchlist
   - youtube_watch_niche
 
-skills:
-  - find-viral-shorts
-  - research-youtube-niche
-  - reverse-engineer-video
-  - competitor-research
-  - content-opportunity
+requires_env:
+  - name: YOUTUBE_API_KEY
+    description: Optional for official YouTube Data API access; unofficial discovery can run without it.
+    url: https://console.cloud.google.com/apis/credentials
+    secret: true
