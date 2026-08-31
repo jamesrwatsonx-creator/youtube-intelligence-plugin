@@ -1,0 +1,14 @@
+name: youtube-intelligence
+version: 0.1.0
+description: YouTube research, breakout detection, niche analysis, and watchlist intelligence.
+provides_tools:
+  - youtube_search
+  - youtube_find_outliers
+  - youtube_find_breakouts
+  - youtube_analyze_niche
+  - youtube_analyze_channel
+  - youtube_analyze_video
+  - youtube_get_transcript
+  - youtube_find_similar_content
+  - youtube_create_watchlist
+  - youtube_watch_niche
